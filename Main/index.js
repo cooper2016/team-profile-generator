@@ -9,7 +9,7 @@ const Engineer = require("./lib/Engineer");
 const team = [];
 
 // questions that will be asked when the app starts about manager
-const managerPrompts = [
+const managerPrompt = [
   {
     type: "input",
     message: "What is your team managers name?",
@@ -32,7 +32,7 @@ const managerPrompts = [
   },
 ];
 
-const engineerPrompts = [
+const engineerPrompt = [
   {
     type: "input",
     message: "What is the engineers name?",
@@ -90,7 +90,7 @@ const continuePrompt = [
 // initialization function
 const init = () => {
   //ask client for team manager information
-  inquirer.prompt(managerPrompts).then((answer) => {
+  inquirer.prompt(managerPrompt).then((answer) => {
     const manager = new Manager(
       answer.managerName,
       answer.managerId,
@@ -107,7 +107,7 @@ const continueFunction = () => {
   inquirer.prompt(continuePrompt).then((data) => {
     //if add engineer, run engineer prompt
     if (data.addMember === "Engineer") {
-      inquirer.prompt(engineerPrompts).then((data) => {
+      inquirer.prompt(engineerPrompt).then((data) => {
         const engineer = new Engineer(
           data.engineerName,
           data.engineerID,
@@ -120,7 +120,7 @@ const continueFunction = () => {
       });
       //if Intern run intern prompt
     } else if (data.addMember === "Intern") {
-      inquirer.prompt(internPrompts).then((data) => {
+      inquirer.prompt(internPrompt).then((data) => {
         const intern = new Intern(
           data.internName,
           data.internID,
