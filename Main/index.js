@@ -33,11 +33,58 @@ const managerQuestions = [
   },
 ];
 
+const engineerPrompt = [
+  {
+    type: "input",
+    message: "What is the engineers name?",
+    name: "engineerName",
+  },
+  {
+    type: "input",
+    message: "What is the engineers id?",
+    name: "engineerID",
+  },
+  {
+    type: "input",
+    message: "What is the engineers email?",
+    name: "engineerEmail",
+  },
+  {
+    type: "input",
+    message: "What is the engineers Github?",
+    name: "engineerGithub",
+  },
+];
+
+const internPrompt = [
+  {
+    type: "input",
+    message: "What is the interns name?",
+    name: "internName",
+  },
+  {
+    type: "input",
+    message: "What is the interns id?",
+    name: "internID",
+  },
+  {
+    type: "input",
+    message: "What is the interns email?",
+    name: "internEmail",
+  },
+  {
+    type: "input",
+    message: "Where does the intern go to school?",
+    name: "internSchool",
+  },
+];
+
 const continuePrompt = [
   {
     type: "checkbox",
     message: "Would you like to add an Engineer, Intern, or no one?",
     name: "addMember",
+    choices: ["Engineer", "Intern", "None"],
   },
 ];
 
@@ -52,10 +99,11 @@ const init = () => {
       answer.managerPhone
     );
     team.push(manager);
+    continueFunction();
   });
 };
 
-const addAnotherMember = () => {};
+const continueFunction = () => {};
 
 // Function to write out HTML File
 function writeToFile(fileName, data) {
