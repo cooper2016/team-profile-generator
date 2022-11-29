@@ -1,10 +1,9 @@
 // include dependeancies
 const inquirer = require("inquirer");
 const fs = require("fs");
-const manager = require("./lib/Manager");
-const intern = require("./lib/Intern");
-const engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
 
 //array of our team members
 const team = [];
