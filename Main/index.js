@@ -1,6 +1,7 @@
 // include dependeancies
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
@@ -145,15 +146,14 @@ const html = `
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="/dist/style.css">
     <title>Team Profile Generator</title>
 </head>
 <body>
     <header class="text-center fs-3 bg-dark text-white py-5">Team Profile</header>
 
     <main class=" container d-grid gap-3">
-          <!-- Employee Cards go here -->
-           
+     <!-- Employee Cards go here -->
 
     </main>
     
